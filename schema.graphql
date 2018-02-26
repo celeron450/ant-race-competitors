@@ -1,0 +1,29 @@
+type Ant {
+  # The name of the ant
+  name: String!
+
+  # The length of the ant in millimetres
+  length: Int!
+
+  # The color of the ant
+  color: AntColor!
+
+  # The weigt of the ant in milligrams
+  weight: Int!
+}
+
+enum AntColor {
+  BLACK
+  RED
+  SILVER
+}
+
+type Query {
+  # A list of competing ants
+  ants: [Ant]!
+}
+
+# Relay compiler wants a type with an ID
+type Hack {
+  id: ID
+}
